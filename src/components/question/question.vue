@@ -24,28 +24,40 @@
 			<div class="content">{{question.description}}</div>
 		</div>
 		<footer>
-			<div class="moreAnswer">
+			<div class="menuItem">
 				<img src="./more_answers.png">
-				更多回答
+				<div>
+					<span>更多</span>
+					<span>回答</span>
+				</div>
 			</div>
-			<div class="toAnswer">
+			<div class="menuItem">
 				<img src="./answer_it.png">
-				我要回答
+				<div>
+					<span>我要</span>
+					<span>回答</span>
+				</div>
 			</div>
-			<div class="answer">
+			<div class="menuItem">
 				<img src="./comments1.png">
-				评论
-				<span class="answerNum">{{question.answerNum}}</span>
+				<div>	
+					<span>评论</span>
+					<span class="answerNum">{{question.answerNum}}</span>
+				</div>
 			</div>
-			<div class="like">
+			<div class="menuItem">
 				<img src="./likes1.png">
-				赞
-				<span class="likeNum">{{question.likeNum}}</span>
+				<div>
+					<span>赞</span>
+					<span class="likeNum">{{question.likeNum}}</span>
+				</div>
 			</div>
-			<div class="collect">
+			<div class="menuItem">
 				<img src="./collection.png">
-				收藏
-				<span class="collectNum">{{question.collectNum}}</span>
+				<div>
+					<span>收藏</span>
+					<span class="collectNum">{{question.collectNum}}</span>
+				</div>
 			</div>
 		</footer>
 	</div>
@@ -63,15 +75,14 @@ export default{
 				topicTwo:"学习",
 				title:"北二饭堂真好吃",
 				description:"this is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an articlethis is an article",
-				likeNum:23,
-				collectNum:25,
-				answerNum:4
+				likeNum:1,
+				collectNum:20,
+				answerNum:400
 			}
 		}
 	}
 }
 </script>
-
 <style>
 html, body{
 	margin: 0;
@@ -79,6 +90,8 @@ html, body{
 	width: 100%;
 	height: 100%;
 }
+</style>
+<style scoped>
 .container{
 	display: flex;
 	min-height: 100vh;
@@ -156,10 +169,16 @@ footer{
 	color: #16d6a7;
 	font-size: 10px;
 }
-footer div{
-	width: 46px;
+.menuItem{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 	margin-right: 10px;
 	cursor: pointer;
+}
+.menuItem span{
+	display: flex;
+	flex-direction: column;
 }
 footer img{
 	height: 25px;
