@@ -1,47 +1,29 @@
+<!-- 消息页面 -->
 <template>
 	<div class="container">
 		<header>
-			<div class="buttonBox">
-				<div class="search"></div>
-				<img class="ask" src="./write_question_white.png"></img>
-			</div>
-			<div class="tags">
-				<div class="question active">问答</div>
-				<div class="article">文章</div>
-			</div>
+			<div>消息</div>
 		</header>
 		<div class="main">
-			<div class="labelBox">
-				<div class="label">
-					<img src="./study_icon.png">
-					<p>学业</p>
+			<div class="tags">
+				<div class="button active">
+					<span>回答</span>
+					<span class="choosen"></span>
 				</div>
-				<div class="label">
-					<img src="./club_icon.png">
-					<p>社团</p>
+				<div class="button">
+					<span>评论</span>
+					<span class="choosen"></span>
 				</div>
-				<div class="label">
-					<img src="./traffic_icon.png">
-					<p>交通</p>
-				</div>
-				<div class="label">
-					<img src="./life_icon.png">
-					<p>生活</p>
-				</div>
-				<div class="label">
-					<img src="./entertainment_icon.png">
-					<p>娱乐</p>
-				</div>
-				<div class="label">
-					<img src="./others_icon.png">
-					<p>其他</p>
+				<div class="button">
+					<span>点赞</span>
+					<span class="choosen"></span>
 				</div>
 			</div>
 			<item v-for="item of items" :item="item" :key="item.id"></item>
 		</div>
 		<footer>
 			<div class="menuButton">
-				<img src="./compass_choosen.png">
+				<img src="./compass_unchoosen.png">
 				<p>校园知乎</p>
 			</div>
 			<div class="menuButton">
@@ -49,7 +31,7 @@
 				<p>华园社区</p>
 			</div>
 			<div class="menuButton">
-				<img src="./news.png">
+				<img src="./news_press.png">
 				<p>消息</p>
 				<span class="tips">10</span>
 			</div>
@@ -62,61 +44,41 @@
 </template>
 
 <script>
-import item from '@/base/compassItem/compassItem.vue'
+import item from '@/base/newsItem/newsItem.vue'
 export default{
 	data(){
-		return {
+		return{
 			items:[
 				{
 					id:0,
 					imgUrl:"",
 					questioner:"北二打饭小哥",
 					releaseTime:"一小时前",
-					topicOne:"生活",
-					topicTwo:"学习",
-					title:"北二饭堂真是好吃啊",
 					description:"文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章",
-					likeNum:866
 				},{
 					id:1,
 					imgUrl:"",
 					questioner:"北二打饭小哥",
 					releaseTime:"一小时前",
-					topicOne:"生活",
-					topicTwo:"学习",
-					title:"北二饭堂真是好吃啊",
 					description:"文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章",
-					likeNum:866
 				},{
 					id:2,
 					imgUrl:"",
 					questioner:"北二打饭小哥",
 					releaseTime:"一小时前",
-					topicOne:"生活",
-					topicTwo:"学习",
-					title:"北二饭堂真是好吃啊",
 					description:"文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章",
-					likeNum:866
 				},{
 					id:3,
 					imgUrl:"",
 					questioner:"北二打饭小哥",
 					releaseTime:"一小时前",
-					topicOne:"生活",
-					topicTwo:"学习",
-					title:"北二饭堂真是好吃啊",
 					description:"文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章",
-					likeNum:866
 				},{
 					id:4,
 					imgUrl:"",
 					questioner:"北二打饭小哥",
 					releaseTime:"一小时前",
-					topicOne:"生活",
-					topicTwo:"学习",
-					title:"北二饭堂真是好吃啊",
 					description:"文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章",
-					likeNum:866
 				}
 			]
 		}
@@ -126,6 +88,7 @@ export default{
 	}
 }
 </script>
+
 <style>
 html, body{
 	margin: 0;
@@ -143,75 +106,51 @@ html, body{
 }
 /* header */
 header{
+	width: 100%;
+	height: 45px;
 	background-color: #16d6a7;
-	display: flex;
-	flex-direction: column;
-}
-.buttonBox{
-	padding: 12px 0 0 15px;
-	display: flex;
-	justify-content: space-between;
-}
-.search{
-	width: 80%;
-	height: 25px;
-	background-color: white;
-	border-radius: 25px;
-	line-height: 25px;
-	text-align: center;
-}
-.ask{
-	height: 25px;
-	margin: auto;
-	cursor: pointer;
-}
-.tags{
-	height: 40px;
-	line-height: 40px;
 	color: white;
-	font-size: 16px;
+	font-size: 15pt;
+	line-height: 45px;
 	display: flex;
-	justify-content: space-around;
+	align-items: center
 }
-.question, .article{
-	width: 24%;
-	text-align: center;
-	border-bottom: solid 3px #16d6a7;
-}
-.active{
-	border-bottom: solid 3px white;
+header div{
+	margin: auto;
+	padding: 0 17px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 /* main */
 .main{
 	flex: 1;
 	padding-bottom: 60px;
 }
-.labelBox{
-	height: 55px;
-	background-color: white;
+.tags{
+	height: 37px;
+	width: 100vw;
 	display: flex;
-	color: #16d6a7;
+	justify-content: center;
 	font-size: 10px;
-	justify-content: space-around;
-	align-items: center;
-	padding: 0 20px;
+	color: #16d6a7;
 }
-.label{
-	width: 25px;
-	height: 32px;
+.button{
+	width: 24vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	cursor: pointer;
 }
-.label img{
-	height: 15px;
+.button span{
+	height: 34px;
+	line-height: 34px;
 }
-.label p{
-	display: inline-block;
-	text-align: center;
-	padding: 0;
-	margin: 0;
+.choosen{
+	width: 100%;
+	border-radius: 5px;
+}
+.active .choosen{
+	background-color: #16d6a7;
 }
 /* footer */
 footer{
@@ -233,7 +172,7 @@ footer{
 	font-size: 8px;
 	position: relative;
 }
-.menuButton:nth-child(1){
+.menuButton:nth-child(3){
 	color: #26d9ad;
 }
 .menuButton img{
