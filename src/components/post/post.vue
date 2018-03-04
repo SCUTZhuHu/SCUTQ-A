@@ -16,14 +16,16 @@
 				<div class="label active">娱乐</div>
 				<div class="label">其他</div>
 			</div>
-			<input type="text" name="" class="title">
-			<input type="text" name="desc">
+			<textarea type="text" name="" class="title" placeholder="请输入题目" rows="1"></textarea>
+			<textarea type="textarea" name="desc" class="content" placeholder="问题描述" rows="35"></textarea>
 		</div>
 	</div>
 </template>
 
 <script>
-	
+export default{
+
+}
 </script>
 
 <style>
@@ -35,6 +37,10 @@ html, body{
 }
 </style>
 <style scoped>
+.container{
+	display: flex;
+	flex-direction: column;
+}
 header{
 	width: 100vw;
 	height: 45px;
@@ -54,5 +60,52 @@ header img{
 }
 .post{
 	margin-right: 16px;
+}
+.main{
+	width: 100vw;
+	font-size: 10px;
+	display: flex;
+	flex-direction: column;
+	background-color: #fcfcfc;
+	padding-top: 10px;
+}
+.main span{
+	color: #999999;
+	padding-left: 18px;
+}
+.labelBox{
+	padding-left: 18px;
+	padding-top: 5px;
+	padding-bottom: 13px;
+	display: flex;
+	align-items: center;
+}
+.label{
+	width: 25px;
+	height: 15px;
+	color: #16d6a7;
+	line-height: 15px;
+	border-radius: 10px;
+	margin-right: 13px;
+	background-color: #ffffff;
+}
+.active{
+	background-color: #16d6a7;
+	color: #ffffff;
+}
+.title{
+	width: 100vw;
+	background-color: #ffffff;
+	height: 30px;
+	line-height: 30px;
+	border: none;
+	padding-left: 18px;
+}
+.content{
+	width: 100vw;
+	flex: 1;
+	border: none;
+	margin-top: 6px;
+	padding-left: 18px;
 }
 </style>

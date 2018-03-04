@@ -8,6 +8,10 @@ import Article from '@/components/article/article'
 import News from '@/components/news/news'
 import Comment from '@/components/comment/comment'
 import Post from '@/components/post/post'
+import PostComment from '@/components/postComment/postComment'
+import Search from '@/components/search/search'
+import Result from '@/components/result/result'
+import Index from '@/components/index/index'
 
 Vue.use(Router)
 
@@ -27,5 +31,9 @@ export default new Router({
     { path:'/news', component:News },
     { path:'/comment', component: Comment},
     { path:'/post', component: Post},
+    { path:'/postComment', component: PostComment },
+    { path:'/search', component: Search},
+    { path:'/result', component: Result},
+    { path:'/index', component: Index},
   ]
 })
