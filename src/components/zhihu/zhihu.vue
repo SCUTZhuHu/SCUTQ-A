@@ -1,15 +1,14 @@
 <template>
-  <div class="helloworld">
-    hello world!
+  <div class="zhihu">
+    zhihu
   </div>
 </template>
 
 <script>
 export default {
-  
 }
 </script>
 
-<style>
+<style lang="stylus" scoped>
 
 </style>

@@ -1,14 +1,22 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <keep-alive>
+       <router-view></router-view>
+    </keep-alive>
+     <tab></tab>
   </div>
 </template>
 
 <script>
+import Tab from './base/tab/tab'
+
 export default {
+  components:{
+    Tab
+  }
 }
 </script>
 
-<style>
+<style <style lang="stylus">
 
 </style>
